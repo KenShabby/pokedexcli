@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"internal/pokeapi"
+	"pokedexcli/internal/pokeapi"
 )
 
 type config struct {

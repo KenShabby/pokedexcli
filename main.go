@@ -1,7 +1,7 @@
 package main
 
 import (
-	"internal/pokeapi"
+	"pokedexcli/internal/pokeapi"
 	"time"
 )
 
