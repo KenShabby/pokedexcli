@@ -1,3 +1,4 @@
+// Package pokeapi
 package pokeapi
 
 import (
