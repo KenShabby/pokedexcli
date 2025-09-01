@@ -1,0 +1,6 @@
+ruleDirs:
+- /Users/brendancoen/SyncTrayzor Default/code/go/pokedexcli/rules
+testConfigs:
+- testDir: /Users/brendancoen/SyncTrayzor Default/code/go/pokedexcli/rule-tests
+utilDirs:
+- /Users/brendancoen/SyncTrayzor Default/code/go/pokedexcli/utils

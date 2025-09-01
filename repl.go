@@ -4,9 +4,8 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strings"
-
 	"pokedexcli/internal/pokeapi"
+	"strings"
 )
 
 type config struct {
@@ -21,18 +20,15 @@ func startRepl(cfg *config) {
 	for {
 		fmt.Print("Pokedex > ")
 		reader.Scan()
-
 		words := cleanInput(reader.Text())
 		if len(words) == 0 {
 			continue
 		}
-
 		commandName := words[0]
 		args := []string{}
 		if len(words) > 1 {
 			args = words[1:]
 		}
-
 		command, exists := getCommands()[commandName]
 		if exists {
 			err := command.callback(cfg, args...)
@@ -46,7 +42,6 @@ func startRepl(cfg *config) {
 		}
 	}
 }
-
 func cleanInput(text string) []string {
 	output := strings.ToLower(text)
 	words := strings.Fields(output)
@@ -77,7 +72,7 @@ func getCommands() map[string]cliCommand {
 			callback:    commandExplore,
 		},
 		"inspect": {
-			name:        "imspect <pokemon_name>",
+			name:        "inspect <pokemon_name>",
 			description: "Inspect a pokemon in your inventory",
 			callback:    commandInspect,
 		},

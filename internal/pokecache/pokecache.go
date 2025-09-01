@@ -1,3 +1,4 @@
+// Package pokecache
 package pokecache
 
 import (
